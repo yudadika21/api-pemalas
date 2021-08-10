@@ -2,7 +2,7 @@ const PemalasDB = require("../config/db");
 const { getUserInfo } = require("../utils/values");
 
 async function berapaView() {
-	let v = await PemalasDB.findOne({ _id: "607bdc01616fe325c421225c" });
+	let v = await PemalasDB.findOne({ _id: "611258e3273c38054646fb5a" });
 	return v;
 }
 
@@ -16,7 +16,7 @@ exports.tambahView = async function () {
 	if (arr.includes(ip)) return;
 	arr.push(ip);
 	PemalasDB.findOneAndUpdate(
-		{ _id: "607bdc01616fe325c421225c" },
+		{ _id: "611258e3273c38054646fb5a" },
 		{ $set: { list: arr } },
 		(err, res) => {
 			if (err) return err;
